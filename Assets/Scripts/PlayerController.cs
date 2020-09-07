@@ -8,8 +8,8 @@ public class PlayerController : MonoBehaviour
     private Rigidbody2D playerRb2D;
     public float gravityModifier;
     public float jumpForce;
-    public bool isOnGround = true;
     public bool gameOver = false;
+
     void Start()
     {
         playerRb2D = GetComponent<Rigidbody2D>();
@@ -19,18 +19,18 @@ public class PlayerController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Space) && isOnGround)
+        if (playerRb2D.velocity.y == 0f && Input.GetKeyDown(KeyCode.Space))
         {
             playerRb2D.AddForce(Vector3.up * jumpForce, ForceMode2D.Impulse);
-            isOnGround = false;
         }
     }
 
     private void OnCollisionEnter(Collision collision)
     {
-        if (collision.gameObject.CompareTag("Ground"))
+        if (collision.gameObject.CompareTag("Enemy"))
         {
-            isOnGround = true;
+            gameOver = true;
+            Debug.Log("Game over");
         }
     }
 }

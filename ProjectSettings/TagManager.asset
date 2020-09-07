@@ -5,6 +5,8 @@ TagManager:
   serializedVersion: 2
   tags:
   - Background
+  - Ground
+  - Enemy
   layers:
   - Default
   - TransparentFX
@@ -14,7 +16,7 @@ TagManager:
   - UI
   - 
   - 
-  - 
+  - Ground
   - 
   - 
   - 
@@ -41,4 +43,13 @@ TagManager:
   m_SortingLayers:
   - name: Default
     uniqueID: 0
+    locked: 0
+  - name: Background
+    uniqueID: 1194595963
+    locked: 0
+  - name: Player and enemies
+    uniqueID: 630576903
+    locked: 0
+  - name: Ground
+    uniqueID: 3409267789
     locked: 0
