@@ -14,20 +14,31 @@ public class SpawnController : MonoBehaviour
 
     public float startDelay1 = 1f;
     public float startDelay2 = 1f;
-    public float repeatRate1 = 1f;
-    public float repeatRate2 = 1f;
+    public float repeatRate;
+
+    public Random generator = new Random();
 
     void Start()
     {
-        InvokeRepeating("SpawnScorpion", startDelay1, repeatRate1);
-        InvokeRepeating("SpawnVulture", startDelay2, repeatRate2);
         playerControllerScript = GameObject.Find("Player").GetComponent<PlayerController>();
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+        repeatRate = Random.Range(0, 100);
+
+        if (repeatRate == 1)
+        {
+            SpawnScorpion();
+        }
+
+        repeatRate = Random.Range(0, 100);
+
+        if (repeatRate == 1)
+        {
+            SpawnVulture();
+        }
     }
 
     void SpawnScorpion()

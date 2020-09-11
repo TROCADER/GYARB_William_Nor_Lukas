@@ -180,7 +180,7 @@ SpriteRenderer:
   m_SortingLayerID: 630576903
   m_SortingLayer: 2
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 173b0575c3ac88c42931b2b903c9d420, type: 3}
+  m_Sprite: {fileID: 21300000, guid: bf01a914a9b1a8143ab4403ffa09388a, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -199,7 +199,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 51512161}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: -3, z: 0}
+  m_LocalPosition: {x: 0, y: -2.5, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -278,6 +278,8 @@ GameObject:
   - component: {fileID: 200852710}
   - component: {fileID: 200852709}
   - component: {fileID: 200852708}
+  - component: {fileID: 200852711}
+  - component: {fileID: 200852712}
   m_Layer: 8
   m_Name: Day1ground
   m_TagString: Ground
@@ -350,7 +352,7 @@ SpriteRenderer:
   m_SortingLayerID: -885699507
   m_SortingLayer: 3
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 96e696e40850fde4e91f6e280e3573e0, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 143a674066fb79d40a779e5ab7935af8, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -369,12 +371,36 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 200852707}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: -4.3, z: 0}
+  m_LocalPosition: {x: 0, y: -4.2, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &200852711
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 200852707}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 760569a4be2fc9844ba7615823545519, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &200852712
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 200852707}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 375881fb6faa08b4884c012c25b32ad8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1062630499
 GameObject:
   m_ObjectHideFlags: 0
@@ -538,7 +564,7 @@ SpriteRenderer:
   m_SortingLayerID: 1194595963
   m_SortingLayer: 1
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: ba60004402ebe0e4db83b271a1b98695, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 960aad60faffdfd42b94febdfa49f790, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -557,7 +583,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1544764335}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 0.05, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -572,7 +598,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1544764335}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a7988a442f3651a48af90668d00a61d8, type: 3}
+  m_Script: {fileID: 11500000, guid: 375881fb6faa08b4884c012c25b32ad8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!114 &1544764339
@@ -584,7 +610,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1544764335}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 569b5b9c644691c41b26d5c535352020, type: 3}
+  m_Script: {fileID: 11500000, guid: 760569a4be2fc9844ba7615823545519, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!61 &1544764340
@@ -639,17 +665,16 @@ MonoBehaviour:
   m_GameObject: {fileID: 1586320121}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4b4ee357289aae8469385c3b7e5e5cf5, type: 3}
+  m_Script: {fileID: 11500000, guid: 68d00a6ecbd765a4fa1c936e25602bce, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  scorpionPrefab: {fileID: 1593182908519603959, guid: bce02a28f0125064a811011d6b08a642,
+  scorpionPrefab: {fileID: 1593182908519603959, guid: cac2f56d3369c6441a9c3804ed449132,
     type: 3}
-  vulturePrefab: {fileID: 2165045948680686780, guid: bdb7ef5881d547142bbdfca7a69eb56c,
+  vulturePrefab: {fileID: 2165045948680686780, guid: 5b8b8abc268a1e3448d249d1b2cfce3b,
     type: 3}
   startDelay1: 1
   startDelay2: 1
-  repeatRate1: 2
-  repeatRate2: 2
+  repeatRate: 0
 --- !u!4 &1586320123
 Transform:
   m_ObjectHideFlags: 0
