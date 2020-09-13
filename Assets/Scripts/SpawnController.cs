@@ -26,14 +26,14 @@ public class SpawnController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        repeatRate = Random.Range(0, 100);
+        repeatRate = Random.Range(0, 500);
 
         if (repeatRate == 1)
         {
             SpawnScorpion();
         }
 
-        repeatRate = Random.Range(0, 100);
+        repeatRate = Random.Range(0, 1000);
 
         if (repeatRate == 1)
         {
