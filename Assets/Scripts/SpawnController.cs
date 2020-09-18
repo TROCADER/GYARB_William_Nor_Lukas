@@ -10,34 +10,35 @@ public class SpawnController : MonoBehaviour
     public GameObject vulturePrefab;
     private Vector3 spawnPosGround = new Vector3(7, -3, 0);
     private Vector3 spawnPosAir = new Vector3(7, -2, 0);
+    private CollisionWithOtherEnemy collisionWithOtherEnemyScript;
     private PlayerController playerControllerScript;
 
-    public float startDelay1 = 1f;
-    public float startDelay2 = 1f;
-    public float repeatRate;
+    public int repeatRate;
 
     public Random generator = new Random();
 
     void Start()
     {
+        collisionWithOtherEnemyScript = GameObject.Find("Scorpion").GetComponent<CollisionWithOtherEnemy>();
         playerControllerScript = GameObject.Find("Player").GetComponent<PlayerController>();
     }
 
     // Update is called once per frame
     void Update()
     {
-        repeatRate = Random.Range(0, 500);
-
-        if (repeatRate == 1)
+        if (collisionWithOtherEnemyScript.withinRange == false && playerControllerScript.gameOver == false)
         {
-            SpawnScorpion();
-        }
+            repeatRate = Random.Range(0, 500);
 
-        repeatRate = Random.Range(0, 1000);
+            if (repeatRate == 1)
+            {
+                SpawnVulture();
+            }
 
-        if (repeatRate == 1)
-        {
-            SpawnVulture();
+            else if (repeatRate == 2 | repeatRate == 3)
+            {
+                SpawnScorpion();
+            }
         }
     }
 
