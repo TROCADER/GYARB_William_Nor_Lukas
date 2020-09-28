@@ -5,14 +5,14 @@ using UnityEngine;
 public class PlayerController : MonoBehaviour
 {
     // Start is called before the first frame update
+    private Animator anim;
     private Rigidbody2D playerRb2D;
+
     public float gravityModifier;
     public float jumpForce;
 
     public float downForce;
     public bool gameOver = false;
-
-    private Animator anim;
 
     void Start()
     {
@@ -42,6 +42,11 @@ public class PlayerController : MonoBehaviour
             {
                 anim.SetBool("onGround", false);
             }
+        }
+
+        else
+        {
+            anim.gameObject.GetComponent<Animator>().enabled = false;
         }
     }
 
