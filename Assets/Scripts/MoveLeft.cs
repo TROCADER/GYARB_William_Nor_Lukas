@@ -21,7 +21,7 @@ public class MoveLeft : MonoBehaviour
     {
         if (playerControllerScript.gameOver == false)
         {
-            transform.Translate(Vector3.left * Time.deltaTime * cameraControllerScript.counter);
+            transform.Translate((Vector3.left * 2) * Time.deltaTime  * cameraControllerScript.counter);
         }
 
         if (transform.position.x < leftBound && gameObject.CompareTag("Enemy"))

@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PlayerController : MonoBehaviour
 {
@@ -47,6 +48,11 @@ public class PlayerController : MonoBehaviour
         else
         {
             anim.gameObject.GetComponent<Animator>().enabled = false;
+
+            if (Input.GetKeyDown(KeyCode.Space))
+            {
+                SceneManager.LoadScene("Start");
+            }
         }
     }
 

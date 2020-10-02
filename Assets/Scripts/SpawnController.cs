@@ -28,9 +28,9 @@ public class SpawnController : MonoBehaviour
         if (playerControllerScript.gameOver == false)
         {
             //Spawning-försök händer varje 1.5 sekunder (90frames/60fps = 1.5)
-            if (timeToSpawn == 90)
+            if (timeToSpawn == 75)
             {
-                repeatRate = Random.Range(0, 5);
+                repeatRate = Random.Range(0, 4);
                 if (repeatRate == 1)
                 {
                     SpawnVulture();
